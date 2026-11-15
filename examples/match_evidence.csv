@@ -1,0 +1,2 @@
+matched_domain,frame.number,ip.src,ipv6.src,ip.dst,ipv6.dst,dns.flags.response,dns.qry.name,dns.a,dns.aaaa
+games.samsclass.info,225,8.8.8.8,,192.168.225.129,,True,games.samsclass.info,"104.28.16.29,104.28.17.29",

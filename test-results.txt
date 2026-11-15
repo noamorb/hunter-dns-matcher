@@ -1,0 +1,15 @@
+test_bad_csv (test_hunter.HunterTests.test_bad_csv) ... ok
+test_changed_capture (test_hunter.HunterTests.test_changed_capture) ... ok
+test_empty_indicators (test_hunter.HunterTests.test_empty_indicators) ... ok
+test_existing_output (test_hunter.HunterTests.test_existing_output) ... ok
+test_invalid_indicator (test_hunter.HunterTests.test_invalid_indicator) ... ok
+test_match_csv_and_ipv6 (test_hunter.HunterTests.test_match_csv_and_ipv6) ... ok
+test_missing_capture (test_hunter.HunterTests.test_missing_capture) ... ok
+test_no_dns (test_hunter.HunterTests.test_no_dns) ... ok
+test_no_matching_domain (test_hunter.HunterTests.test_no_matching_domain) ... ok
+test_tshark_failure (test_hunter.HunterTests.test_tshark_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+OK
