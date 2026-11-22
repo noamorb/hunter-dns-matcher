@@ -1,9 +1,16 @@
 # Hunter — Offline DNS Domain Matcher
 
-An educational portfolio project: inspect DNS question names in a local capture,
-compare them to an explicit domain list, and export packet-level evidence.
-Bash launcher, Python standard-library processing, and TShark extraction.
-Developed with AI assistance; review and understand the implementation before presenting it.
+A cybersecurity lab project by **Noam Orbach** ([noamorb](https://github.com/noamorb)).
+
+Hunter is a Python and Bash tool that uses TShark to match DNS names in packet captures against a domain list. It exports the matching frame numbers, addresses and DNS fields to CSV so analysts can inspect the original evidence.
+
+## What I verified in Kali Linux
+
+- Ran 10 automated tests and checked the tool on a lab PCAP. The tests use mocked TShark output. The lab run used TShark on a capture.
+- Found one exact match across seven unique DNS names. Frame 225 contained a DNS response with two IPv4 addresses, both preserved in a single CSV field.
+- Used the DNS result in a [Windows forensics case study](https://github.com/noamorb/windows-forensics-case-study) to check an IP match against a network artifact recovered from memory.
+
+See the [validation record](VALIDATION.md) and [sample CSV](examples/match_evidence.csv) for the evidence.
 
 ## Requirements and quick start
 
@@ -72,13 +79,6 @@ These verify application logic, not TShark's ability to decode a PCAP.
 When changing the code, rerun the tests and a real-capture check. Do not
 distribute captures without permission.
 
-## Explaining the project in an interview
-
-Be able to explain exact versus substring matching, query versus response,
-CSV quoting, the distinction between no matches and failed analysis, why SHA-256
-is recorded, and what the capture cannot prove. Keep the original course work
-separate from this later improvement and describe AI assistance honestly.
-
 ## Repository layout
 
 - `hunter.py`: validation, extraction, matching and reporting.
@@ -89,6 +89,4 @@ separate from this later improvement and describe AI assistance honestly.
 
 ## Attribution
 
-Prepared by Noam Orbach as a learning project, with AI-assisted implementation
-and review. This is a later improvement to coursework, not a claim that this
-exact version was submitted or graded during the course.
+Noam Orbach ran the lab analysis and validated the results in Kali Linux. Hunter grew out of a John Bryce course project. AI assisted with implementation and review of the portfolio version.
