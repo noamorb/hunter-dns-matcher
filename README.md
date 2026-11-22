@@ -21,10 +21,14 @@ bash hunter.sh /path/to/packets.pcap test_indicators.txt results
 python3 -m unittest -v
 ```
 
-Choose a NEW output directory each run. The supplied indicators are test data,
+Replace `/path/to/packets.pcap` with your own capture and choose a new output directory each run. The supplied indicators are test data,
 not a threat-intelligence feed; games.samsclass.info is not labeled malicious.
 
-## Behavior
+## Example result
+
+In the Kali lab run, Hunter reported seven unique DNS names and one exact match. The matching row records frame 225 and preserves both IPv4 answers in a single CSV field. See the [sample output](examples/match_evidence.csv) for the actual row and the [validation notes](VALIDATION.md) for the test scope.
+
+## Workflow
 
 1. Validate the indicator list and capture readability before extraction.
 2. Refuse existing output directories.
